@@ -44,7 +44,7 @@ class Student extends Person
         this.previousBackground  = student.previousBackground ;
         this.className  = student.className ;
         this.favSubjects = student.favSubjects;
-        //this.name = student.name;
+       
     }
     listsSubject()
     {
@@ -53,13 +53,13 @@ class Student extends Person
             return (`${this.name} favourite subjects are ${this.favSubjects[i]}`);
          }
     }
-    PRAssignment(student, subject) 
+    PRAssignment(subject) 
     {
-        return(`${student.name} has submitted a PR for ${subject}`);
+        return(`${this.name} has submitted a PR for ${subject}`);
     }
-    sprintChallenge(student, subject) 
+    sprintChallenge(subject) 
     {
-        return(`${student.name} has begun sprint challenge on ${subject}`);
+        return(`${this.name} has begun sprint challenge on ${subject}`);
     }
 }
 
@@ -128,8 +128,8 @@ console.log(fred.catchPhrase); //Don't forget the homies
 //Student
 console.log(john.speak());
 console.log(john.listsSubject());
-console.log(john.PRAssignment(john, 'HTML'));
-console.log(john.sprintChallenge(john, 'HTML'));
+console.log(john.PRAssignment('HTML'));
+console.log(john.sprintChallenge('HTML'));
 console.log(john.previousBackground);//Salesperson
 console.log(john.className);//CS132
 console.log(john.favSubjects);//['Html', 'CSS', 'JavaScript']
